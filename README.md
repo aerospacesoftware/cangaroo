@@ -5,7 +5,7 @@ written by Hubert Denkmair <hubert@denkmair.de>
 
 ## building on linux
 * to install all required packages in a vanilla ubuntu 16.04:
-  * sudo apt-get install build-essential git qt5-qmake qtbase5-dev libnl-3-dev libnl-route-3-dev
+  * sudo apt-get install build-essential git qt5-qmake qtbase5-dev libnl-3-dev libnl-route-3-dev pkgconfig
 * build with:
   * qmake -qt=qt5
   * make
@@ -25,6 +25,11 @@ written by Hubert Denkmair <hubert@denkmair.de>
   for a normal release build, these are: Qt5Core.dll Qt5Gui.dll Qt5Widgets.dll Qt5Xml.dll
 
 ## changelog
+
+### changes from upstream version
+* Add pkgconfig to list of required packages
+* Add #include <linux/sockios.h> to SocketCanInterface.cpp
+
 
 ### v0.2.1 unreleased
 * make logging easier
