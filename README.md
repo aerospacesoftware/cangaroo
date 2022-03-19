@@ -4,13 +4,21 @@ open source can bus analyzer
 written by Hubert Denkmair <hubert@denkmair.de>
 
 ## building on linux
-* to install all required packages in a vanilla ubuntu 16.04:
+* to install all required packages in a vanilla ubuntu 20.04:
   * sudo apt-get install build-essential git qt5-qmake qtbase5-dev libnl-3-dev libnl-route-3-dev pkg-config
 * build with:
   * qmake -qt=qt5
   * make
-  * sudo make install
+  * make install
 
+  Then copy cangaroo and canifconfig to the directory of choice, e.g. /usr/local/bin
+
+  To bring the CAN interface up yourself, make a script that runs:
+  ```
+  sudo ip link set can0 type can bitrate 1000000
+  sudo ip link set up can0 txqueuelen 1024
+  sudo ip link show can0
+  ```
 ## building on windows
 * Qt Creator (Community Version is okay) brings everything you need
 * except for the PCAN libraries. 
