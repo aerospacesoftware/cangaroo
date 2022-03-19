@@ -5,11 +5,11 @@ written by Hubert Denkmair <hubert@denkmair.de>
 
 ## building on linux
 * to install all required packages in a vanilla ubuntu 16.04:
-  * sudo apt-get install build-essential git qt5-qmake qtbase5-dev libnl-3-dev libnl-route-3-dev pkgconfig
+  * sudo apt-get install build-essential git qt5-qmake qtbase5-dev libnl-3-dev libnl-route-3-dev pkg-config
 * build with:
   * qmake -qt=qt5
   * make
-  * make install
+  * sudo make install
 
 ## building on windows
 * Qt Creator (Community Version is okay) brings everything you need
